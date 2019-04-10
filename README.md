@@ -299,7 +299,7 @@ Acessar o arquivo vim /etc/httpd/conf.d/zabbix.conf e altera conforme abaixo
 php_value date.timezone America/Sao_Paulo
 ```
 
- * Reiniciar o Apahar e finalize a instalação via navegador
+ * Reiniciar o Apahar e finalize a instalação via navegador (Conforme print 1.png até 8.png)
 ```bash
 systemctl restart httpd.service
 ```
