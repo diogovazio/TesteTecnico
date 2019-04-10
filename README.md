@@ -29,7 +29,7 @@ software-properties-common
 ```bash
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
-	* Configurar repositorio do Docker
+  * Configurar repositorio do Docker
 
 ```bash
 sudo add-apt-repository \
@@ -37,7 +37,7 @@ sudo add-apt-repository \
 $(lsb_release -cs) \
 stable"
 ```	
-	* Atualizar Pacotes
+  * Atualizar pacotes
 	
 ```bash
 sudo apt-get update
