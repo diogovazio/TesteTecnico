@@ -73,7 +73,8 @@ sudo chmod +x /usr/local/bin/docker-compose
  
  ## Instalação da API Docker-viacep-flask
  
-	* Clonar o repositoio
+  * Clonar o repositorio
+	
 ```bash
 git clone https://github.com/leleobhz/docker-viacep-flask.git 
 ```	 
@@ -198,51 +199,3 @@ Linux - /etc/hosts
  
  
  
- 
- 
-## Instalação das dependências
-
-```bash
-$ pip install -r requirements.txt
-```
-
-## Utilização
-
-```bash
->>> import viacep
->>> d = viacep.ViaCEP('78048000')
->>> data = d.getDadosCEP()
->>> data
-{'cep': '78048-000', 'logradouro': 'Avenida Miguel Sutil', 'complemento': 'de 5686 a 6588 - lado par', 'bairro': 'Alvorada', 'localidade': 'Cuiabá', 'uf': 'MT', 'unidade': '', 'ibge': '5103403', 'gia': ''}
->>> data['localidade']
-'Cuiabá'
->>> data['uf']
-'MT'
->>> data.keys()
-dict_keys(['cep', 'logradouro', 'complemento', 'bairro', 'localidade', 'uf', 'unidade', 'ibge', 'gia'])
->>> data.values()
-dict_values(['78048-000', 'Avenida Miguel Sutil', 'de 5686 a 6588 - lado par', 'Alvorada', 'Cuiabá', 'MT', '', '5103403', ''])
->>>
-```
-
-## Testes unitários
----------
-
-```bash
-$ python .\test_viacep.py
-.....
-----------------------------------------------------------------------
-Ran 5 tests in 0.984s
-
-OK
-```
-
-## Exemplo com Python Flask
-
-* https://github.com/leogregianin/viacep-flask
-* https://viacep-flask.herokuapp.com
-
-
-## Licença
--------
-[Licença MIT](LICENSE)
