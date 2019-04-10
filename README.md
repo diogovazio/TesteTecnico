@@ -183,7 +183,7 @@ Caminho Linux - /etc/hosts
  
  ## Instalação do Servidor Zabbix
  
- # Atualização dos pacotes básico 
+Atualização dos pacotes basico 
  
  * Atualizando os repositórios do CentOS
 ```bash
@@ -191,7 +191,8 @@ yum -y update
 ```	  
  
  * Instalar o repositório adicional Epel 
-```bash
+
+ ```bash
 yum -y install epel-release
 ```	 
  
@@ -228,7 +229,7 @@ systemctl enable mariadb.service
 systemctl start mariadb.service
 ```	  
  
- * Configurações de Segurança do MariaDB
+ * Configuraçãos de Segurança do MariaDB
 ```bash
 mysql_secure_installation
  
@@ -263,23 +264,23 @@ FLUSH PRIVILEGES;
 EXIT 
 ```  
  
- * Repositório do Zabbix 4
+ * Reposirotio do Zabbix 4
 ```bash
 rpm -ivh https://repo.zabbix.com/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-1.el7.noarch.rpm 
 ```
 
- * Instalando pacotes do Zabbix
+ * Intalando pacotes do Zabix
  ```bash
 yum install -y zabbix-server-mysql zabbix-web-mysql zabbix-proxy-mysql zabbix-agent
 ```
 
- * Importando Banco de Dados Zabbix
+ * importando Banco de Dados Zabbix
  ```bash
 cd /usr/share/doc/zabbix-server-mysql*
 zcat create.sql.gz | mysql -u zabbix -p zabbix
 ``` 
  * Criando conexão com o banco
-Alterar os parâmetros no arquivo vim /etc/zabbix/zabbix_server.conf
+Alerar os parametros no arquivo vim /etc/zabbix/zabbix_server.conf
 
 ```bash
 DBHost=localhost (Informar Host do banco)
@@ -299,7 +300,8 @@ Acessar o arquivo vim /etc/httpd/conf.d/zabbix.conf e altera conforme abaixo
 php_value date.timezone America/Sao_Paulo
 ```
 
- * Reiniciar o Apache e finalize a instalação via interface web-mysql
+ * Reiniciar o Apahar e finalize a instalação via interface web-mysql
 ```bash
 systemctl restart httpd.service
 ```
+
