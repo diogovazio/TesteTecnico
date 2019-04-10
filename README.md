@@ -300,7 +300,7 @@ Acessar o arquivo vim /etc/httpd/conf.d/zabbix.conf e altera conforme abaixo
 php_value date.timezone America/Sao_Paulo
 ```
 
- * Reiniciar o Apahar e finalize a instalação via interface web-mysql
+ * Reiniciar o Apahar e finalize a instalação via navegador
 ```bash
 systemctl restart httpd.service
 ```
