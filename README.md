@@ -183,7 +183,7 @@ Caminho Linux - /etc/hosts
  
  ## Instalação do Servidor Zabbix
  
- # Atualização dos pacotes basico 
+ # Atualização dos pacotes básico 
  
  * Atualizando os repositórios do CentOS
 ```bash
@@ -228,7 +228,7 @@ systemctl enable mariadb.service
 systemctl start mariadb.service
 ```	  
  
- * Configuraçãos de Segurança do MariaDB
+ * Configurações de Segurança do MariaDB
 ```bash
 mysql_secure_installation
  
@@ -263,6 +263,43 @@ FLUSH PRIVILEGES;
 EXIT 
 ```  
  
- 
- 
- 
+ * Repositório do Zabbix 4
+```bash
+rpm -ivh https://repo.zabbix.com/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-1.el7.noarch.rpm 
+```
+
+ * Instalando pacotes do Zabbix
+ ```bash
+yum install -y zabbix-server-mysql zabbix-web-mysql zabbix-proxy-mysql zabbix-agent
+```
+
+ * Importando Banco de Dados Zabbix
+ ```bash
+cd /usr/share/doc/zabbix-server-mysql*
+zcat create.sql.gz | mysql -u zabbix -p zabbix
+``` 
+ * Criando conexão com o banco
+Alterar os parâmetros no arquivo vim /etc/zabbix/zabbix_server.conf
+
+```bash
+DBHost=localhost (Informar Host do banco)
+DBName=zabbix (Informar o nome da Base)
+DBUser=zabbix (Informar o Usuário da base)
+DBPassword=password  (Informar a senha)
+``` 
+ * Iniciar o Start com o S.O e iniciar o serviço 
+```bash
+systemctl enable zabbix-server
+systemctl start zabbix-server
+``` 
+ * Configurar o TimeZone
+Acessar o arquivo vim /etc/httpd/conf.d/zabbix.conf e altera conforme abaixo
+
+```bash
+php_value date.timezone America/Sao_Paulo
+```
+
+ * Reiniciar o Apache e finalize a instalação via interface web-mysql
+```bash
+systemctl restart httpd.service
+```
