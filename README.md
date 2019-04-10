@@ -269,7 +269,7 @@ EXIT
 rpm -ivh https://repo.zabbix.com/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-1.el7.noarch.rpm 
 ```
 
- * Intalando pacotes do Zabix
+ * Intalando pacotes do Zabbix
  ```bash
 yum install -y zabbix-server-mysql zabbix-web-mysql zabbix-proxy-mysql zabbix-agent
 ```
@@ -278,9 +278,8 @@ yum install -y zabbix-server-mysql zabbix-web-mysql zabbix-proxy-mysql zabbix-ag
  ```bash
 cd /usr/share/doc/zabbix-server-mysql*
 zcat create.sql.gz | mysql -u zabbix -p zabbix
-``` 
  * Criando conexão com o banco
-Alerar os parametros no arquivo vim /etc/zabbix/zabbix_server.conf
+Alterar os parametros no arquivo vim /etc/zabbix/zabbix_server.conf
 
 ```bash
 DBHost=localhost (Informar Host do banco)
