@@ -172,6 +172,7 @@ ports:
  ## Alteração do arquivos hosts
  
 Windows - C:\WINDOWS\system32\drivers\etc\hosts
+
 Linux - /etc/hosts
  
 ```bash
