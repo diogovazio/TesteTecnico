@@ -158,7 +158,7 @@ viacep         |    Use a production WSGI server instead.
 viacep         |  * Debug mode: off
 viacep         |  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 ```	
- * Possivel alteração
+ * Possiveis alteração de VIRTUAL_HOST e Porta
 ```bash
 dentro do arquivo docker-composer.yml podemos realizar a alteraçao do virtual host da API e da porta onde a mesma vai escutar.
 
