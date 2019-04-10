@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.0</version>
+    <date>2019-04-10T13:28:09Z</date>
+    <groups>
+        <group>
+            <name>API</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>ViaCep</template>
+            <name>ViaCep</name>
+            <description>Cenário web para aplicação ViaCep</description>
+            <groups>
+                <group>
+                    <name>API</name>
+                </group>
+            </groups>
+            <applications/>
+            <items/>
+            <discovery_rules/>
+            <httptests/>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+</zabbix_export>
